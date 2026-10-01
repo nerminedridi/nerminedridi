@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 210" width="440" height="210" role="img" aria-label="Cyberdeck: Pocket voice journal">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3FBFE"/>
+      <stop offset="1" stop-color="#D4F1FA"/>
+    </linearGradient>
+    <clipPath id="c"><rect x="1" y="1" width="438" height="208" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .title { font: 700 21px ui-sans-serif, -apple-system, "Segoe UI", sans-serif; fill: #2F4A5C; }
+    .sub { font: 500 13.5px ui-sans-serif, -apple-system, "Segoe UI", sans-serif; fill: #4A6B7F; }
+    .desc { font: 400 14px ui-sans-serif, -apple-system, "Segoe UI", sans-serif; fill: #2F4A5C; }
+    .chip { font: 600 12px ui-monospace, Menlo, Consolas, monospace; fill: #B9661A; }
+    .pill { font: 700 12px ui-sans-serif, -apple-system, "Segoe UI", sans-serif; fill: #FFFFFF; }
+    .emoji { font: 24px "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif; }
+    .bub { fill: rgba(255,255,255,.7); stroke: #8ED3E6; stroke-width: 1.2; opacity: 0; animation: up 5s ease-in infinite; }
+    .b2 { animation-delay: 1.7s; } .b3 { animation-delay: 3.4s; }
+    @keyframes up { 0% { opacity: 0; transform: translateY(0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(-120px); } }
+    .dot { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  </style>
+  <g clip-path="url(#c)">
+    <rect width="440" height="210" fill="url(#bg)"/>
+    <rect width="6" height="210" fill="#B9661A"/>
+    <circle class="bub" cx="410" cy="200" r="5"/>
+    <circle class="bub b2" cx="395" cy="205" r="3.5"/>
+    <circle class="bub b3" cx="420" cy="208" r="4"/>
+  </g>
+  <rect x="1" y="1" width="438" height="208" rx="18" fill="none" stroke="#8ED3E6" stroke-width="2"/>
+
+  <circle cx="46" cy="46" r="24" fill="#FFF0D9" stroke="#B9661A" stroke-opacity=".35"/>
+  <text class="emoji" x="46" y="55" text-anchor="middle">🎙️</text>
+  <text class="title" x="82" y="44">Cyberdeck</text>
+  <text class="sub" x="82" y="64">Pocket voice journal</text>
+
+  <rect x="309" y="22" width="111" height="24" rx="12" fill="#B9661A"/>
+  <circle class="dot" cx="323" cy="34" r="4" fill="#FFFFFF"/>
+  <text class="pill" x="333" y="38.5">In progress</text>
+
+  <text class="desc" x="24" y="104">Records on a wake word, saves voice notes to microSD</text>
+  <text class="desc" x="24" y="125">and plays them back on a tiny screen with a custom</text>
+  <text class="desc" x="24" y="146">5-key keypad.</text>
+
+  <rect x="24" y="168" width="78" height="24" rx="12" fill="#FFF0D9" stroke="#B9661A" stroke-opacity=".35"/>
+  <text class="chip" x="63" y="184.5" text-anchor="middle">Pico 2 W</text>
+  <rect x="110" y="168" width="70" height="24" rx="12" fill="#FFF0D9" stroke="#B9661A" stroke-opacity=".35"/>
+  <text class="chip" x="145" y="184.5" text-anchor="middle">I2S mic</text>
+  <rect x="188" y="168" width="99" height="24" rx="12" fill="#FFF0D9" stroke="#B9661A" stroke-opacity=".35"/>
+  <text class="chip" x="237.5" y="184.5" text-anchor="middle">SPI display</text>
+  <rect x="295" y="168" width="70" height="24" rx="12" fill="#FFF0D9" stroke="#B9661A" stroke-opacity=".35"/>
+  <text class="chip" x="330" y="184.5" text-anchor="middle">microSD</text>
+</svg>
