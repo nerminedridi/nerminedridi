@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="A cute sea turtle typing on a laptop in an aquarium">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4F1FA"/>
+      <stop offset="1" stop-color="#7FCDE3"/>
+    </linearGradient>
+    <clipPath id="tank"><rect x="1" y="1" width="598" height="218" rx="22"/></clipPath>
+  </defs>
+  <style>
+    .line { stroke: #2F4A5C; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .skin { fill: #A8E2B8; }
+    .shell { fill: #6CBF8C; }
+    .patch { fill: #4E9F72; }
+    .pink { fill: #FFA9C2; }
+    .ink { fill: #2F4A5C; }
+
+    .weed { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 3s ease-in-out infinite; }
+    .w2 { animation-delay: -1s; } .w3 { animation-delay: -2s; }
+    @keyframes sway { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+
+    .head { transform-box: fill-box; transform-origin: 50% 100%; animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+
+    .eye { transform-box: fill-box; transform-origin: center; animation: blink 4s infinite; }
+    @keyframes blink { 0%,90%,100% { transform: scaleY(1); } 94% { transform: scaleY(0.1); } }
+
+    .flip-l { animation: tap 0.36s ease-in-out infinite; }
+    .flip-r { animation: tap 0.36s ease-in-out infinite 0.18s; }
+    @keyframes tap { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+    .back-l { transform-box: fill-box; transform-origin: 100% 50%; animation: paddle 1.4s ease-in-out infinite; }
+    .back-r { transform-box: fill-box; transform-origin: 0% 50%; animation: paddle 1.4s ease-in-out infinite reverse; }
+    @keyframes paddle { 0%,100% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } }
+
+    .fish { animation: swim 9s linear infinite; }
+    @keyframes swim { 0% { transform: translateX(-60px); } 100% { transform: translateX(680px); } }
+    .fish-tail { transform-box: fill-box; transform-origin: 100% 50%; animation: wag .4s ease-in-out infinite; }
+    @keyframes wag { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(.6); } }
+
+    .bubble-up { fill: rgba(255,255,255,.55); stroke: #FFFFFF; stroke-width: 1.5; opacity: 0; animation: bubble 4s ease-in infinite; }
+    .b2 { animation-delay: 1s; } .b3 { animation-delay: 2s; } .b4 { animation-delay: 3s; } .b5 { animation-delay: 1.5s; }
+    @keyframes bubble { 0% { opacity: 0; transform: translateY(0); } 10% { opacity: 1; } 100% { opacity: 0; transform: translateY(-150px); } }
+
+    .float { font: 700 16px ui-monospace, Menlo, Consolas, monospace; opacity: 0; animation: rise 3.6s ease-out infinite; }
+    .f1 { fill: #6A4FD8; } .f2 { fill: #E8457A; animation-delay: .9s; } .f3 { fill: #1E7F6E; animation-delay: 1.8s; } .f4 { fill: #D9822B; animation-delay: 2.7s; }
+    @keyframes rise { 0% { opacity: 0; transform: translateY(0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(-90px); } }
+
+    .bubble { transform-box: fill-box; transform-origin: 0% 100%; animation: pop 4s ease-in-out infinite; }
+    @keyframes pop { 0%,8% { transform: scale(0); } 14%,80% { transform: scale(1); } 88%,100% { transform: scale(0); } }
+    .say { font: 600 15px ui-sans-serif, -apple-system, "Segoe UI", sans-serif; fill: #2F4A5C; }
+  </style>
+
+  <g clip-path="url(#tank)">
+    <!-- water -->
+    <rect x="0" y="0" width="600" height="220" fill="url(#water)"/>
+    <!-- light rays -->
+    <path d="M60 0 L110 0 L60 200 L20 200 Z" fill="#FFFFFF" opacity=".18"/>
+    <path d="M430 0 L470 0 L520 200 L480 200 Z" fill="#FFFFFF" opacity=".14"/>
+
+    <!-- seaweed -->
+    <path class="weed line" fill="#3FA06A" d="M70 205 C 55 170, 85 150, 70 110 C 90 140, 75 170, 86 205 Z"/>
+    <path class="weed w2 line" fill="#56B87D" d="M100 205 C 92 180, 112 165, 102 140 C 118 162, 106 185, 114 205 Z"/>
+    <path class="weed w3 line" fill="#3FA06A" d="M500 205 C 488 175, 515 155, 502 120 C 522 150, 506 178, 518 205 Z"/>
+    <path class="weed line" fill="#56B87D" d="M535 205 C 528 185, 545 172, 538 150 C 552 170, 542 188, 548 205 Z"/>
+
+    <!-- little fish swimming behind the turtle -->
+    <g class="fish">
+      <g transform="translate(0 150)">
+        <path class="fish-tail line" fill="#FF9F43" d="M-14 0 L-26 -9 L-26 9 Z"/>
+        <ellipse class="line" fill="#FFB766" cx="0" cy="0" rx="16" ry="10"/>
+        <circle class="ink" cx="7" cy="-2" r="2"/>
+      </g>
+    </g>
+
+    <!-- rising bubbles -->
+    <circle class="bubble-up" cx="130" cy="200" r="5"/>
+    <circle class="bubble-up b2" cx="145" cy="200" r="3.5"/>
+    <circle class="bubble-up b3" cx="470" cy="200" r="4.5"/>
+    <circle class="bubble-up b4" cx="460" cy="200" r="3"/>
+    <circle class="bubble-up b5" cx="560" cy="200" r="4"/>
+
+    <!-- sand -->
+    <path fill="#F3DCA4" d="M0 200 C 100 192, 200 206, 300 199 C 400 192, 500 206, 600 198 L600 220 L0 220 Z"/>
+    <circle fill="#E2C384" cx="170" cy="208" r="4"/>
+    <circle fill="#E2C384" cx="430" cy="210" r="3"/>
+    <circle fill="#FFC1D3" cx="455" cy="206" r="5"/>
+
+    <!-- floating code bits -->
+    <text class="float f1" x="250" y="125">&lt;/&gt;</text>
+    <text class="float f2" x="345" y="125">♥</text>
+    <text class="float f3" x="222" y="135">{ }</text>
+    <text class="float f4" x="368" y="135">✦</text>
+
+    <!-- back flippers paddling -->
+    <ellipse class="back-l line skin" cx="226" cy="182" rx="20" ry="9"/>
+    <ellipse class="back-r line skin" cx="374" cy="182" rx="20" ry="9"/>
+
+    <!-- shell -->
+    <ellipse class="line shell" cx="300" cy="160" rx="72" ry="44"/>
+    <path class="patch" d="M246 150 l14 -14 h18 l8 14 l-8 14 h-18 z"/>
+    <path class="patch" d="M354 150 l-14 -14 h-18 l-8 14 l8 14 h18 z"/>
+    <path class="patch" d="M250 178 l12 -8 h14 l6 10 l-6 10 h-14 z"/>
+    <path class="patch" d="M350 178 l-12 -8 h-14 l-6 10 l6 10 h14 z"/>
+
+    <!-- head -->
+    <g class="head">
+      <rect class="line skin" x="284" y="112" width="32" height="26" rx="10"/>
+      <ellipse class="line skin" cx="300" cy="92" rx="42" ry="34"/>
+      <circle class="patch" cx="300" cy="66" r="5" opacity=".6"/>
+      <circle class="patch" cx="286" cy="70" r="3" opacity=".6"/>
+      <circle class="patch" cx="314" cy="70" r="3" opacity=".6"/>
+      <ellipse class="eye ink" cx="284" cy="92" rx="5" ry="7"/>
+      <ellipse class="eye ink" cx="316" cy="92" rx="5" ry="7"/>
+      <circle fill="#fff" cx="285.8" cy="89" r="1.8"/>
+      <circle fill="#fff" cx="317.8" cy="89" r="1.8"/>
+      <ellipse class="pink" cx="270" cy="105" rx="7" ry="4.5" opacity=".85"/>
+      <ellipse class="pink" cx="330" cy="105" rx="7" ry="4.5" opacity=".85"/>
+      <path class="line" fill="none" stroke-width="2.5" d="M292 104 q8 7 16 0"/>
+    </g>
+
+    <!-- front flippers tapping on the keyboard -->
+    <ellipse class="flip-l line skin" cx="272" cy="139" rx="15" ry="7"/>
+    <ellipse class="flip-r line skin" cx="328" cy="139" rx="15" ry="7"/>
+
+    <!-- laptop (back of the lid faces us) -->
+    <rect class="line" fill="#B8A4F5" x="240" y="140" width="120" height="58" rx="8"/>
+    <path fill="#FF8FB1" d="M300 178 C 284 166, 288 154, 300 162 C 312 154, 316 166, 300 178 Z"/>
+    <rect class="line" fill="#9C86E8" x="228" y="196" width="144" height="7" rx="3.5"/>
+
+    <!-- speech bubble -->
+    <g class="bubble">
+      <path class="line" fill="#FFFFFF" d="M372 40 h150 a12 12 0 0 1 12 12 v22 a12 12 0 0 1 -12 12 h-130 l-14 12 l2 -12 h-8 a12 12 0 0 1 -12 -12 v-22 a12 12 0 0 1 12 -12 z"/>
+      <text class="say" x="447" y="68" text-anchor="middle">hello, world!</text>
+    </g>
+  </g>
+
+  <!-- aquarium glass frame + shine -->
+  <rect x="2.5" y="2.5" width="595" height="215" rx="21" fill="none" stroke="#8ED3E6" stroke-width="5"/>
+  <path d="M24 20 Q 30 14 40 14" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <path d="M24 34 L24 28" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+</svg>
